@@ -1,9 +1,10 @@
 
 ## Installing python3 and pip
-First off, install Python3 and its dedicated package-manager, pip.
+Python3 comes preinstalled on the running Ubuntu partition (18.04). We are going to need one additional package later on, so we will need Pythons dedicated package manager: pip.
+
+Install it with the following code:
 ```
-yum install python3
-yum install python3-pip
+sudo apt install python3-pip
 ```{{execute}}
 
 ## Fetch Flask using Pip
@@ -14,7 +15,7 @@ pip3 install flask
 ```{{execute}}
 
 ## Fetching the Docker Image for Keycloak
-Docker comes pre-installed with the current Ubuntu image we are using (18.04). The last thing we need is the Keycloak docker image, which you can obtain by performing:
+Docker comes pre-installed. The last thing we need is the Keycloak docker image, which you can obtain by performing:
 
 ```
 docker pull quay.io/keycloak/keycloak
