@@ -24,8 +24,8 @@ import flask
 # Flask settings
 
 # Main
-def main()
-    print("Hello world!")
+def main():
+    pass
 
 
 if __name__="__main__":
