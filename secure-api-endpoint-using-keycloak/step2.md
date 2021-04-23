@@ -16,12 +16,16 @@ cd project
 
 You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`.
 
-```
-import flask
+
+<pre class="file" data-filename="project/api.py" data-target="replace">
+
+import flask 
 
 def main()
     print("Hello world!")
-    
+
 if __name__="__main__":
     main()
-```
+
+</pre>
+
