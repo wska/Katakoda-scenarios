@@ -12,7 +12,6 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['GET'])
 def home():
     return True
-
 </pre>
 
 Now, replace the existing pass in inside of the main function with an app.run(), signaling Flask to start and run the application. 
@@ -21,6 +20,5 @@ Now, replace the existing pass in inside of the main function with an app.run(),
     pass">
 def main():
     app.run()
-
 </pre>
 

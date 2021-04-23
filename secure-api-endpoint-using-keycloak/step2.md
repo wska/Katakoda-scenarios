@@ -12,7 +12,7 @@ cd project
 > api.py
 ```{{execute}}
 
-# Setting up a set up a very basic program
+# Setting up a very basic program
 
 You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`.
 
@@ -28,7 +28,7 @@ def main():
     pass
 
 
-if __name__="__main__":
+if __name__ == "__main__":
     main()
 
 </pre>
