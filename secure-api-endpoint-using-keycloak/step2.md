@@ -6,23 +6,27 @@ mkdir project
 cd project
 ```{{execute}}
 
-# Create a python file for hosting the code for the API
+# Create a python file to work with
 
 ```
 > api.py
 ```{{execute}}
 
-# Setting up a set up a very basic program.
+# Setting up a set up a very basic program
 
 You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`.
 
 
 <pre class="file" data-filename="project/api.py" data-target="replace">
-
+# Imports
 import flask 
 
+# Flask settings
+
+# Main
 def main()
     print("Hello world!")
+
 
 if __name__="__main__":
     main()
