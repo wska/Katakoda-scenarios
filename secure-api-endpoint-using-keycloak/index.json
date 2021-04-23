@@ -6,11 +6,11 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - Installing dependencies",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Setting up a basic Python API",
         "text": "step2.md"
       },
       {
