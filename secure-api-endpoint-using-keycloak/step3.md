@@ -22,3 +22,9 @@ def main():
     app.run()
 </pre>
 
+# Access the URL
+If you now start the application by running:
+```python3 api.py```{{execute}}
+
+One can now query the API, for example using curl:
+```curl http://127.0.0.1:5000/```{{execute}}
