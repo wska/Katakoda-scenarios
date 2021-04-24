@@ -14,7 +14,7 @@
 **4. Create a name for the user and make sure that "Email Verified" is on**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/4.png?raw=true" width="500">
 
-**5. Navigate to "Credentials" on the the user management page and set a password of your choise**
+**5. Navigate to "Credentials" on the the user management page and set a password of your choice**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/5.png?raw=true" width="500">
 
 **6. Navigate to "Realm roles" on the configuration page and add a new role**
