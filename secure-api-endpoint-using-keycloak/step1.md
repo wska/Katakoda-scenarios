@@ -18,5 +18,5 @@ pip3 install flask
 Docker comes pre-installed. The last thing we need is the Keycloak docker image, which you can obtain by performing:
 
 ```
-docker pull quay.io/keycloak/keycloak
+docker pull quay.io/keycloak/keycloak:12.0.4
 ```{{execute}}
