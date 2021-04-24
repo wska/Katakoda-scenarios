@@ -1,14 +1,14 @@
 # Setting up the Keycloak realm and users
 
-*Note: You can click the images to enlarge them*
+<span style="color:red">NOTE: You can click the images to enlarge them</span>.
 
 # Creating the Keycloak user 
 
-Navigate to "Lookup" on the user management page and add a new user
+Navigate to `Lookup` on the user management page and add a new user
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/3.png?raw=true" width="500">
 
-Create a name for the user and make sure that "Email Verified" is activated
+Create a name for the user and make sure that `Email Verified` is activated
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/4.png?raw=true" width="500">
 
-Navigate to "Credentials" on the the user management page and set a password of your choice
+Navigate to `Credentials` on the the user management page and set a password of your choice
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/5.png?raw=true" width="500">
