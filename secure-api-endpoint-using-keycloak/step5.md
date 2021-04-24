@@ -2,30 +2,29 @@
 
 *Note: You can click the images to enlarge them*
 
-1. Click the button "Add realm"
+**1. Click the button "Add realm"**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/1.png?raw=true" width="500">
 
-2. Create a name for the realm
+**2. Create a name for the realm**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/2.png?raw=true" width="500">
 
-3. Navigate to "Lookup" on the user management page and add a new user
+**3. Navigate to "Lookup" on the user management page and add a new user**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/3.png?raw=true" width="500">
 
-4. Create a name for the user and make sure that "Email Verified" is activated
+**4. Create a name for the user and make sure that "Email Verified" is activated**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/4.png?raw=true" width="500">
 
-5. Navigate to "Credentials" on the the user management page and set a password of your choice
+**5. Navigate to "Credentials" on the the user management page and set a password of your choice**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/5.png?raw=true" width="500">
 
-6. Navigate to "Realm roles" on the configuration page and add a new role
+**6. Navigate to "Realm roles" on the configuration page and add a new role**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/6.png?raw=true" width="500">
 
-7. Create a name for the role
+**7. Create a name for the role**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/7.png?raw=true" width="500">
 
-8. Navigate to "Role mappings" on the user management page and assign the realm role
+**8. Navigate to "Role mappings" on the user management page and assign the realm role**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/8.png?raw=true" width="500">
 
-9. Make sure that the role mappings are updated
+**9. Make sure that the role mappings are updated**
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/9.png?raw=true" width="500">
-
