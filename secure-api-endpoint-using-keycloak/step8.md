@@ -45,3 +45,5 @@ app.config.update({
 oidc = OpenIDConnect(app)
 
 </pre>
+
+This sets up the use of the *client_secrets.json* file we created just before, and also initiates a new OpenIDConnect application wrapped around our Flask app.
