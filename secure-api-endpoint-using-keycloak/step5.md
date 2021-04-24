@@ -1,6 +1,6 @@
 # Setting up the Keycloak realm and users
 
-<span style="color:red">NOTE: You can click the images to enlarge them</span>.
+<span style="color:red">Note: You can click the images to enlarge them</span>.
 
 # Creating the Keycloak realm 
 
