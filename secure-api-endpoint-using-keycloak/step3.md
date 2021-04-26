@@ -5,8 +5,7 @@ Let us now add a Flask api endpoint. It is typical to set up some basic configur
 
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask settings">
 # Flask settings
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = Flask(__name__)
 
 # Flask Open Endpoint
 @app.route('/', methods=['GET'])
@@ -30,7 +29,7 @@ Now, replace the existing pass in inside of the main function with an app.run(),
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="def main():
     pass">
 def main():
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
 </pre>
 
 # Access the URL

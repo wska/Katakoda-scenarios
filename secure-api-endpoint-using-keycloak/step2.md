@@ -19,7 +19,7 @@ You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `p
 
 <pre class="file" data-filename="project/api.py" data-target="replace">
 # Imports
-import flask 
+from flask import Flask, g
 import json
 
 # Flask settings
