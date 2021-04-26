@@ -10,4 +10,3 @@ If we modify it to instead performs a POST request, we get an entirely different
 
 While our method is correct, this endpoint now requires an access token from our Keycloak server.
 
-> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/secure"
