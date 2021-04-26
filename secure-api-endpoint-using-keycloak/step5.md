@@ -1,5 +1,5 @@
 # Setting up the Keycloak realm and users
-
+Here you will be given instructions on how to set up a Keycloak realm and a test user account. It is advised to try a split-screen view or, if you have multiple monitors, utilize them.
 <span style="color:red">Note: You can click the images to enlarge them</span>
 
 # Creating the Keycloak realm 

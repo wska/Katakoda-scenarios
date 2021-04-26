@@ -5,16 +5,16 @@ When integrating Keycloak to work with a Flask API, it is usually convenient to 
 <pre class="file" data-filename="project/client_secrets.json" data-target="replace">
 {
     "web": {
-        "issuer": "http://localhost:8088/auth/realms/MyRealm",
-        "auth_uri": "http://localhost:8080/auth/realms/MyRealm/protocol/openid-connect/auth",
+        "issuer": "http://localhost:8080/auth/realms/myRealm",
+        "auth_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/auth",
         "client_id": "ApiClient",
         "client_secret": "SECRET HERE",
         "redirect_uris": [
             "http://localhost:5000/*"
         ],
-        "userinfo_uri": "http://localhost:8088/auth/realms/MyRealm/protocol/openid-connect/userinfo", 
-        "token_uri": "http://localhost:8088/auth/realms/MyRealm/protocol/openid-connect/token",
-        "token_introspection_uri": "http://localhost:8088/auth/realms/MyRealm/protocol/openid-connect/token/introspect"
+        "userinfo_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/userinfo", 
+        "token_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/token",
+        "token_introspection_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/token/introspect"
     }
 } 
 </pre>
@@ -42,7 +42,7 @@ app.config.update({
     'OIDC_ID_TOKEN_COOKIE_SECURE': False,
     'OIDC_REQUIRE_VERIFIED_EMAIL': False,
     'OIDC_USER_INFO_ENABLED': True,
-    'OIDC_OPENID_REALM': 'flask-demo',
+    'OIDC_OPENID_REALM': 'myRealm',
     'OIDC_SCOPES': ['openid', 'email', 'profile'],
     'OIDC_INTROSPECTION_AUTH_METHOD': 'client_secret_post'
 })

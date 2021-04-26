@@ -13,6 +13,10 @@ Fetch the flask package for Python3, which we will use to create a basic Python 
 ```
 pip3 install flask
 ```{{execute}}
+We will also need an extensionpackage for flask called flask_oidc for some more advanced usage later on:
+```
+pip3 install flask_oidc
+```{{execute}}
 
 ## Fetching the Docker Image for Keycloak
 Docker comes pre-installed. The last thing we need is the Keycloak docker image, which you can obtain by performing:

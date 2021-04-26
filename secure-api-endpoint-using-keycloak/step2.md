@@ -14,7 +14,7 @@ cd project
 
 # Setting up a very basic program
 
-You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`.
+You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`. And write some code for the Flask app:
 
 
 <pre class="file" data-filename="project/api.py" data-target="replace">
