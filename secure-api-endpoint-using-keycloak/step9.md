@@ -1,20 +1,20 @@
 ## Configuring the Python API to work with our new Keycloak realm
 
 # Adding a client_secrets.json file
-When integrating Keycloak to work with a Flask API, it is usually convenient to have a client_secrets JSON file which contains information about things like endpoints which the application will use to obtain and verify information. Here is how the json file should look, assuming you named the realm MyRealm, and the client_ID as client_id. 
+When integrating Keycloak to work with a Flask API, it is usually convenient to have a client_secrets JSON file which contains information about things like endpoints which the application will use to obtain and verify information. Here is how the json file should look, assuming you named the realm myRealm, and the client_ID as flask-app. 
 <pre class="file" data-filename="project/client_secrets.json" data-target="replace">
 {
     "web": {
-        "issuer": "http://localhost:8080/auth/realms/myRealm",
-        "auth_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/auth",
-        "client_id": "ApiClient",
+        "issuer": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm",
+        "auth_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/auth",
+        "client_id": "flask-app",
         "client_secret": "SECRET HERE",
         "redirect_uris": [
             "http://localhost:5000/*"
         ],
-        "userinfo_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/userinfo", 
-        "token_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/token",
-        "token_introspection_uri": "http://localhost:8080/auth/realms/myRealm/protocol/openid-connect/token/introspect"
+        "userinfo_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/userinfo", 
+        "token_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token",
+        "token_introspection_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token/introspect"
     }
 } 
 </pre>
@@ -29,11 +29,9 @@ One final modification you will need to do is add the client secret, which can b
 </br>
 
 Now we will add some more configuration to our Flask app. Back to *api.py*, we want to add the following settings:
-<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask settings
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True">
+<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask settings">
 # Flask settings
-app = flask.Flask(__name__)
+app = Flask(__name__)
 app.config["DEBUG"] = True
 app.config.update({
     'SECRET_KEY': 'SomethingNotEntirelySecret',
