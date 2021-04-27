@@ -54,6 +54,11 @@
         "text": "step12.md"
       }
     ],
+    "assets": {
+      "host01": [
+          {"file": "hedgehog.jpeg", "target": "/root/project", "chmod": "+x"}
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },
