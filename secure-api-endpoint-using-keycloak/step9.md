@@ -5,16 +5,16 @@ When integrating Keycloak to work with a Flask API, it is usually convenient to 
 <pre class="file" data-filename="project/client_secrets.json" data-target="replace">
 {
     "web": {
-        "issuer": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm",
-        "auth_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/auth",
+        "issuer": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm",
+        "auth_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/auth",
         "client_id": "flask-app",
         "client_secret": "SECRET HERE",
         "redirect_uris": [
             "http://localhost:5000/*"
         ],
-        "userinfo_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/userinfo", 
-        "token_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token",
-        "token_introspection_uri": "https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token/introspect"
+        "userinfo_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/userinfo", 
+        "token_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token",
+        "token_introspection_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token/introspect"
     }
 } 
 </pre>
@@ -40,7 +40,7 @@ app.config.update({
     'OIDC_REQUIRE_VERIFIED_EMAIL': False,
     'OIDC_USER_INFO_ENABLED': True,
     'OIDC_OPENID_REALM': 'myRealm',
-    'OIDC_SCOPES': ['openid', 'email', 'profile'],
+    'OIDC_SCOPES': ['user', 'openid', 'email', 'profile'],
     'OIDC_INTROSPECTION_AUTH_METHOD': 'client_secret_post'
 })
 

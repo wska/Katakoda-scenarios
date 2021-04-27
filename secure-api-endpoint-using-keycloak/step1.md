@@ -11,7 +11,7 @@ sudo apt install python3-pip
 *what is flask*
 Fetch the flask package for Python3, which we will use to create a basic Python API. We will also need an extension package for flask called flask_oidc for some more advanced usage later on:
 ```
-pip3 install flask, flask_oidc
+pip3 install flask flask_oidc
 ```{{execute}}
 
 

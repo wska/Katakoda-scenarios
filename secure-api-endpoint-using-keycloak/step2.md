@@ -20,6 +20,7 @@ You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `p
 <pre class="file" data-filename="project/api.py" data-target="replace">
 # Imports
 from flask import Flask, g
+from flask_oidc import OpenIDConnect
 import json
 
 # Flask settings
