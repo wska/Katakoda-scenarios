@@ -30,6 +30,7 @@ One final modification you will need to do is add the client secret, which can b
 
 Now we will add some more configuration to our Flask app. Back to *api.py*, we want to add the following settings:
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="app = Flask(__name__)">
+app = Flask(__name__)
 app.config.update({
     'SECRET_KEY': 'NotVerySecretKey',
     'TESTING': True,
