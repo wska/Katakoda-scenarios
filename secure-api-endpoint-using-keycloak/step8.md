@@ -26,4 +26,4 @@ Finally, there is one last thing we are going to need to extract from here, whic
 
 <img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/13.png?raw=true" width="500">
 
-You are going to need this secret to configure the flask application, so you can keep this tab open. You do not need to make any other changes in Keycloak.
+You are going to need this secret to configure the flask application, so you can keep this tab open. You do not need to make any other changes in Keycloak. The client secret is generated, you can can also generate new ones from here. 

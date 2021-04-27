@@ -1,12 +1,16 @@
+# Adding the login redirect endpoint
 
+Another alternative way of securing an endpoint is to do so by redirecting a user to an authentication provider (such as our Keycloak server). This is a bit more suited to things like websites which are meant to be interacted with through a browser. 
 
-Note that we specified that we are only allowed to do POST requests. By default, curl performs a GET request. If you try doing the same curl command against the new /secureapi endpoint, you will simply get an error.
-
-> curl http://localhost:5000/secureapi
-
-If we modify it to instead performs a POST request, we get an entirely different error:
-
-> curl -X POST http://localhost:5000/secureapi
-
-While our method is correct, this endpoint now requires an access token from our Keycloak server.
+Lets add a new endpoint, called /secure, which will require a complete login procedure.
+<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask Login Redirect">
+# Flask Secure Endpoint (Requires Login)
+@app.route("/secure")
+@oidc.require_login
+def secureEndpoint():
+    loginInfo = oidc.user_getinfo(['preferred_username', 'email', 'sub'])
+    username = info.get('preferred_username')
+    email = info.get('email')
+    user_id = info.get('sub')
+</pre>
 

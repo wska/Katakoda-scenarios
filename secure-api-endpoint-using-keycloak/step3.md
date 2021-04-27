@@ -14,11 +14,8 @@ def home():
 
 
 # Flask Secure Endpoint
-# ... spoiler free
 
-
-# Flask Secure API Endpoint
-# ... spoiler free
+# Flask Login Redirect
 </pre>
 
 
