@@ -33,16 +33,12 @@ So now we may take this endpoint and perform a curl request to it. It will requi
 We will additionally need to specify a header (H) of the type *Content-Type: application/x-www-form-urlencoded*. 
 Let us now query the endpoint and obtain a token, and export it for use:
 
-```
-export TOKEN=$(curl -X POST 'https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token' \
- -H "Content-Type: application/x-www-form-urlencoded" \
- -d "username=testuser" \
- -d 'password=pass' \
- -d 'grant_type=password' \
- -d 'client_id=flask_app' \
- -d 'client_secret=YOUR_SECRET_HERE' \
- | jq -r '.access_token')
-```{{execute T3}}
+
+export TOKEN=$(\
+    curl -X POST https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token \
+    -H 'content-type: application/x-www-form-urlencoded' \
+    -d 'username=testuser&password=123&grant_type=password&client_id=flask-app&client_secret=$(CLIENT_SECRET)' | jq --raw-output '.access_token' \
+ )
 
 Replace the **YOUR_SECRET_HERE** with the client secret you obtained earlier. After performing this, you may view the access token:
 
@@ -50,4 +46,4 @@ Replace the **YOUR_SECRET_HERE** with the client secret you obtained earlier. Af
 
 We may use this now to access the flask-api endpoint */secure*
 
-curl -X POST http://localhost:5000/secure -H 'content-type: application/json' -H "Authorization: Bearer "$TOKEN
+curl -X POST http://localhost:5000/secureapi -H 'content-type: application/json' -H "Authorization: Bearer "$(TOKEN)
