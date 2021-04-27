@@ -29,12 +29,11 @@ One final modification you will need to do is add the client secret, which can b
 </br>
 
 Now we will add some more configuration to our Flask app. Back to *api.py*, we want to add the following settings:
-<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask settings">
-# Flask settings
-app = Flask(__name__)
+<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="app = Flask(__name__)">
 app.config.update({
     'SECRET_KEY': 'NotVerySecretKey',
     'TESTING': True,
+    'DEBUG': True,
     'OIDC_CLIENT_SECRETS': 'client_secrets.json',
     'OIDC_ID_TOKEN_COOKIE_SECURE': False,
     'OIDC_REQUIRE_VERIFIED_EMAIL': False,

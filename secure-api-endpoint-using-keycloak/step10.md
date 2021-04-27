@@ -6,7 +6,7 @@ Additionally, lets add an endpoint called /secureapi, which will require an acce
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask Secure Endpoint">
 # Flask Secure API Endpoint (Requires token to be provided)
 @app.route("/secureapi", methods=['POST'])
-@oidc.accept_token(require_token=True, scopes_required=['basicUser'])
+@oidc.accept_token(require_token=True, scopes_required=['user'])
 def secureTokenApi():
     return json.dumps({'hello': 'Welcome %s' % g.oidc_token_info['sub']})
 </pre>
