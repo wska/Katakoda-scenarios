@@ -32,9 +32,8 @@ Now we will add some more configuration to our Flask app. Back to *api.py*, we w
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask settings">
 # Flask settings
 app = Flask(__name__)
-app.config["DEBUG"] = True
 app.config.update({
-    'SECRET_KEY': 'SomethingNotEntirelySecret',
+    'SECRET_KEY': 'NotVerySecretKey',
     'TESTING': True,
     'OIDC_CLIENT_SECRETS': 'client_secrets.json',
     'OIDC_ID_TOKEN_COOKIE_SECURE': False,
