@@ -56,7 +56,7 @@
     ],
     "assets": {
       "host01": [
-          {"file": "hedgehog.url", "target": "/root/project", "chmod": "+x"}
+          {"file": "hedgehog.jpeg", "target": "/root/project", "chmod": "+x"}
       ]
     },
     "intro": {
