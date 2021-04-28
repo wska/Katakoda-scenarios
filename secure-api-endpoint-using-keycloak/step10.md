@@ -37,7 +37,7 @@ Let us now query the endpoint and obtain a token, and export it for use:
 export TOKEN=$(\
     curl -X POST https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token \
     -H 'content-type: application/x-www-form-urlencoded' \
-    -d 'username=testuser&password=123&grant_type=password&client_id=flask-app&client_secret=$(CLIENT_SECRET)' | jq --raw-output '.access_token' \
+    -d 'username=testuser&password=123&grant_type=password&client_id=flask-app&client_secret=$CLIENT_SECRET' | jq --raw-output '.access_token' \
  )
 
 Replace the **YOUR_SECRET_HERE** with the client secret you obtained earlier. After performing this, you may view the access token:
@@ -47,3 +47,12 @@ Replace the **YOUR_SECRET_HERE** with the client secret you obtained earlier. Af
 We may use this now to access the flask-api endpoint */secure*
 
 curl -X POST http://localhost:5000/secureapi -H 'content-type: application/json' -H "Authorization: Bearer "$(TOKEN)
+
+
+<!-- 
+export TOKEN=$(\
+    curl -X POST https://2886795312-8080-simba08.environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token \
+    -H 'content-type: application/x-www-form-urlencoded' \
+    -d 'username=testuser&password=123&grant_type=password&client_id=flask-app&client_secret=eb4bba63-a902-4ad0-b36c-a12383ccfbec' | jq --raw-output '.access_token' \
+ )
+ -->
