@@ -11,4 +11,5 @@ The aim of this tutorial is to:
 * Showcase how to set up Keycloak and host it using Docker
 * Expand the Flask app to allow interaction with the Keycloak server and use it for login procedures for certain endpoints
  
-**The tutorial is available [here](https://www.katacoda.com/wska/scenarios/secure-api-endpoint-using-keycloak).**
+
+**The tutorial is available [here]!(https://www.katacoda.com/wska/scenarios/add-login-to-python-flask-app-using-keycloak)**
