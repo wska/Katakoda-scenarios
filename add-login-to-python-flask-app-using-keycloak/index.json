@@ -50,6 +50,11 @@
         "text": "step11.md"
       }
     ],
+    "assets": {
+      "host01": [
+          {"file": "totally_not_a_config_file.txt", "target": "/root/project", "chmod": "+x"}
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },
