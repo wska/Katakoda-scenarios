@@ -24,11 +24,9 @@ When integrating Keycloak to work with a Flask API, it is usually convenient to 
 One final modification you will need to do is add the client secret, which can be found under Clients/ApiClient/Credentials in the Keycloak Admin console. You should take that value and replace the `SECRET HERE` value in the JSON file.
 
 </br>
-</br>
 
 <span style="color:red">Please note: If you used different names in for your realm/client, make sure to adjust the config file accordingly!</span>
 
-</br>
 </br>
 
 Now we will add some more configuration to our Flask application. Back to *api.py*, we want to add the following settings:
