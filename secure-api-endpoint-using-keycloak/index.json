@@ -1,5 +1,5 @@
 {
-  "title": "Secure an API endpoint using Keycloak (WORK IN PROGRESS)",
+  "title": "Secure an API endpoint using Keycloak",
   "description": "Teaches how to set up and protect a Python Flask app using Keycloak.",
   "difficulty": "Intermediate",
   "time": "25",
@@ -54,11 +54,6 @@
         "text": "step12.md"
       }
     ],
-    "assets": {
-      "host01": [
-          {"file": "hedgehog.md", "target": "/root/project", "chmod": "+x"}
-      ]
-    },
     "intro": {
       "text": "intro.md"
     },
