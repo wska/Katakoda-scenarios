@@ -1,5 +1,5 @@
 # Adding Flask settings
-Let us now add a Flask api endpoint. It is typical to set up some basic configuration along with an initialization of the flask app.
+Let us now add a Flask api endpoint. It is typical to set up some basic configuration along with an initialization of the flask app. Let us also add a very simple open endpoint, which simply returns a greeting.
 
 
 
@@ -17,7 +17,7 @@ def home():
 
 # Flask Login Redirect
 </pre>
-
+We also added markers for additional more endpoints, which have very *spoilery* names. More on these later.
 
 
 This setups up some basic flask configuration and creates an API endpoint, located at the root of our hostaddress ("/").
