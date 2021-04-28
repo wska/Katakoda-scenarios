@@ -1,17 +1,13 @@
-# Adding the login redirect endpoint
+# Login redirects
 
-Another alternative way of securing an endpoint is to do so by redirecting a user to an authentication provider, such as our Keycloak server. This is a bit more suited to things like websites which are meant to be interacted with through a browser. 
+Now lets try it out: Try heading to the address of the secure api on port 5000:
+> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/secure
 
-Lets add a new endpoint, called `/secure` which will require a complete login procedure:
 
-<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask Login Redirect">
-# Flask Secure Endpoint (Requires Login)
-@app.route("/secure")
-@oidc.require_login
-def secureEndpoint():
-    loginInfo = oidc.user_getinfo(['preferred_username', 'email', 'sub'])
-    username = info.get('preferred_username')
-    email = info.get('email')
-    user_id = info.get('sub')
-</pre>
+You will notice that we actually end up on the Keycloak login page. Here you can use your Keycloak username and password which you defined earlier when you set up the server. Once you login, you should see the message from the */secure* endpoint!
+
+There are many more different security and authentication methods available for *flask_oidc*. If you are interested, you can read more on the official documentation here:
+
+> https://flask-oidc.readthedocs.io/en/latest/
+
 

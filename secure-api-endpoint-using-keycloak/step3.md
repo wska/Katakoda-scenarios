@@ -11,12 +11,10 @@ app = Flask(__name__)
 def home():
     return "Hello from the open endpoint\n"
 
-# Flask Secure Endpoint
-
 # Flask Login Redirect
 </pre>
 
-We also added markers for additional endpoints, which have very [*spoilery*](https://media.makeameme.org/created/spoilers-spoilers-everywhere-5cd1c4.jpg) names. More on these later.
+We also added a marker for another endpoint, which has quite a [*spoilery*](https://media.makeameme.org/created/spoilers-spoilers-everywhere-5cd1c4.jpg) name. More on that one later.
 
 This setups up some basic Flask configuration and creates an API endpoint, located at the root of our hostaddress ("/").
 

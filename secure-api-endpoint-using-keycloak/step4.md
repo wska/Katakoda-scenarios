@@ -14,5 +14,5 @@ You can now access the admin page of your Keycloak server by opening the followi
 
 Log in using the specified credentials in the initial startup of the image:
 
-> Username: admin
+> Username: admin </br>
 > Password: admin 
