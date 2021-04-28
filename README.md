@@ -1,4 +1,6 @@
-# How to add a login procedure on a Python Flask app with Keycloak
+# Katacoda scentarios
+
+## 1. How to add a login procedure on a Python Flask app with Keycloak
 
 This tutorial demonstrates how to secure an API endpoint using Keycloak running in Docker and hosting it on Katacoda. 
 
