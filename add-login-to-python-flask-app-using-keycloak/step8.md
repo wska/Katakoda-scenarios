@@ -10,7 +10,7 @@ There are a couple of different types of clients which are provided by Keycloak:
 * Public
 * Bearer only
 
-We are going to be creating a *confidential client* which will utilize the OpenID Connect authentication protocol, which is built ontop of the OAuth 2.0 framework. 
+These types have their different usages depending on the application type. We will be using a public client, which is the default when creating a new one.
 
 Navigate to `Clients` under your realm, and then press `Create` in the top right corner:
 
