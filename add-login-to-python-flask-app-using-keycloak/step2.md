@@ -1,9 +1,8 @@
 # Create a folder to work with
 
-Create a working folder and navigate to the folder:
+Nnavigate to the project folder:
 
 ```
-mkdir project
 cd project
 ```{{execute}}
 
