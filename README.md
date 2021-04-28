@@ -1,4 +1,4 @@
-# Katacoda scentarios
+# Katacoda scenarios
 
 ## 1. How to add a login procedure on a Python Flask app with Keycloak
 
