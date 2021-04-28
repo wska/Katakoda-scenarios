@@ -1,10 +1,12 @@
-# Interactive Katacoda Scenarios
+# How to add a login procedure on a Python Flask app with Keycloak
 
-[![](http://shields.katacoda.com/katacoda/wska/count.svg)](https://www.katacoda.com/wska "Get your profile on Katacoda.com")
+This tutorial demonstrates how to secure an API endpoint using Keycloak running in Docker and hosting it on Katacoda. 
 
-Visit https://www.katacoda.com/wska to view the profile and interactive scenarios
+The aim of this tutorial is to:
 
-### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
-
-For examples, visit https://github.com/katacoda/scenario-example
+* Showcase how to set up a simple Flask app in Python 3
+* Educate about security, Oauth2, OpenID Connect and Keycloak
+* Showcase how to set up Keycloak and host it using Docker
+* Expand the Flask app to allow interaction with the Keycloak server and use it for login procedures for certain endpoints
+ 
+**The tutorial is available [here](https://www.katacoda.com/wska/scenarios/secure-api-endpoint-using-keycloak).**
