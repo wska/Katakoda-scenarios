@@ -1,12 +1,15 @@
 # Create a folder to work with
 
-Create a working folder and enter it
+Create a working folder and navigate to the folder:
+
 ```
 mkdir project
 cd project
 ```{{execute}}
 
-# Create a python file to work with
+# Create a Python file to work with
+
+Next, create a Python file using the following command:
 
 ```
 > api.py
@@ -14,8 +17,7 @@ cd project
 
 # Setting up a very basic program
 
-You can now open the `api.py` file in the *Katakoda* text editor. Navigate to `project/api.py`. And write some code for the Flask app:
-
+You can now open the `api.py` file in the Katakoda text editor. Navigate to `project/api.py` and include the following code for the Flask application:
 
 <pre class="file" data-filename="project/api.py" data-target="replace">
 # Imports
@@ -29,9 +31,7 @@ import json
 def main():
     pass
 
-
 if __name__ == "__main__":
     main()
 
 </pre>
-

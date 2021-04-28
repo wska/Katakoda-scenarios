@@ -1,8 +1,9 @@
 # Adding the login redirect endpoint
 
-Another alternative way of securing an endpoint is to do so by redirecting a user to an authentication provider (such as our Keycloak server). This is a bit more suited to things like websites which are meant to be interacted with through a browser. 
+Another alternative way of securing an endpoint is to do so by redirecting a user to an authentication provider, such as our Keycloak server. This is a bit more suited to things like websites which are meant to be interacted with through a browser. 
 
-Lets add a new endpoint, called /secure, which will require a complete login procedure.
+Lets add a new endpoint, called `/secure` which will require a complete login procedure:
+
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask Login Redirect">
 # Flask Secure Endpoint (Requires Login)
 @app.route("/secure")
