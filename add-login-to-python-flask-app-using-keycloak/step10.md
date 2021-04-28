@@ -10,7 +10,7 @@ In our instance, we will be using the the following:
 
 > @oidc.require_login
 
-Which makes it so that the endpoint will require the user to log in using Keycloak, where you will need to provide a username and a password in order to access it, lest you [shall not pass](https://imgur.com/a/8SznxTd).
+Which makes it so that the endpoint will require the user to log in using Keycloak, where you will need to provide a username and a password in order to access it, lest you [shall not pass](https://i.imgur.com/QV7ni6j.png).
 
 Lets add a new endpoint, called `/secure` which will require a complete login procedure:
 
