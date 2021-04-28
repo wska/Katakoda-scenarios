@@ -1,4 +1,4 @@
-# Login redirects
+# Login redirect
 
 Now lets try it out: Try heading to the address of the secure api on port 5000:
 > https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/secure
