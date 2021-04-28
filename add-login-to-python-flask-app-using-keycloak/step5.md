@@ -8,11 +8,11 @@ Here you will be given instructions on how to set up a Keycloak realm and a test
 
 Click the button `Add realm`:
 
-<img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/1.png?raw=true" width="500">
+<img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/1.png?raw=true" width="500">
 
 Enter a name for the realm:
 
-<img src="https://github.com/wska/Katakoda-scenarios/blob/main/secure-api-endpoint-using-keycloak/img/2.png?raw=true" width="500">
+<img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/2.png?raw=true" width="500">
 
 <span style="color:red">Please note: You can click the images to enlarge them!</span>
 
