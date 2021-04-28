@@ -10,7 +10,7 @@ When integrating Keycloak to work with a Flask API, it is usually convenient to 
         "issuer": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm",
         "auth_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/auth",
         "client_id": "flask-app",
-        "client_secret": "SECRET HERE",
+        "client_secret": "",
         "redirect_uris": [
             "http://localhost:5000/*"
         ],
