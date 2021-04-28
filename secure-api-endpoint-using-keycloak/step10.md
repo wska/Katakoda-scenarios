@@ -56,4 +56,19 @@ export TOKEN=$(\
     -H 'content-type: application/x-www-form-urlencoded' \
     -d 'username=testuser&password=123&grant_type=password&client_id=flask-app&client_secret=eb4bba63-a902-4ad0-b36c-a12383ccfbec' | jq --raw-output '.access_token' \
  )
+
+ export TOKEN=$(\
+    curl -X POST https://2886795284-8080-simba10.environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token \
+    -H 'content-type: application/x-www-form-urlencoded' \
+    -d 'username=testuser&password=123&grant_type=password&client_id=flask-app' | jq --raw-output '.access_token' \
+ )
+
+
+ curl -k -v \
+     -X POST \
+     -u "testuser" \
+     -d "token=$TOKEN" \
+   "https://2886795284-8080-simba10.environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token/introspect" \
+   | jq .
+
  -->
