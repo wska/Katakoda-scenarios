@@ -1,5 +1,3 @@
-# Setting up Keycloak 
-
 # Creating the Keycloak user 
 
 Next, we will create a user. To your left, you can see two "Submenus". Click on the "User" on the lower one. This puts you on the `Lookup` tab. On the corner to your right you will se the button **add user**. Go ahead and click it.

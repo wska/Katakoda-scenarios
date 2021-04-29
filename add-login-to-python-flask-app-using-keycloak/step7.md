@@ -1,5 +1,3 @@
-# Setting up Keycloak 
-
 # Setting up role mappings
 
 Skip this?
