@@ -7,5 +7,7 @@ I
 
 You will notice that we actually end up on the Keycloak login page. Here you can use your Keycloak username and password which you defined earlier when you set up the server. Once you login, you should see the message from the `/secure` endpoint!
 
-<span style="color:red">Please note: In case you receive the message *Connecting to Port X*, your Flask application has likely gone down and you need to restart it again in `Terminal 1`! CTRL+C tries to terminate it, and `python3 api.py` restarts it. The reason for it going down is from our changes to the file over the course of the tutorial. Katacoda can also have some trouble saving files which are interacted with using the auto-pate. Added and removing a character via the editor usually triggers a save.</span>
+<span style="color:red">Please note: In case you receive the message *Connecting to Port X*, your Flask application has likely gone down and you need to restart it again in `Terminal 1`! CTRL+C tries to terminate it, and `python3 api.py` restarts it. The reason for it going down is from our changes to the file over the course of the tutorial. Katacoda can also have some trouble saving files which are interacted with using the auto-pate. 
+
+Adding and removing a character via the editor usually triggers a save. So if you receive a JSON error from `python3 api.py`, go into client_secrets.json and press enter etc.</span>
 
