@@ -2,6 +2,8 @@
 
 # Setting up role mappings
 
+Skip this?
+
 Navigate to `Realm roles` on the configuration page and add a new role:
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/6.png?raw=true" width="500">
