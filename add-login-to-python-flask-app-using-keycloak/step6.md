@@ -1,6 +1,6 @@
 # Creating the Keycloak user 
 
-Next, we will create a user. To your left, you can see two "Submenus". Click on the "User" on the lower one. This puts you on the `Lookup` tab. On the corner to your right you will se the button **add user**. Go ahead and click it.
+Next, we will create a user. To your left, you can see two submenus. Click on the *Users* on the lower one. This puts you on the `Lookup` tab. On the corner to your right you will se the button **add user**. Go ahead and click it.
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/3.png?raw=true" width="500">
 
