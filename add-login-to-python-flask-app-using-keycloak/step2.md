@@ -1,6 +1,6 @@
 # Create a folder to work with
 
-Nnavigate to the project folder:
+Navigate to the project folder:
 
 ```
 cd project

@@ -25,3 +25,5 @@ Docker comes pre-installed on the running Ubuntu partition (18.04). The last thi
 ```
 docker pull quay.io/keycloak/keycloak:12.0.4
 ```{{execute}}
+
+(This usually takes a little while. Wait till it is complete.)

@@ -49,4 +49,4 @@ oidc = OpenIDConnect(app)
 
 </pre>
 
-This sets up the use of the `client_secrets.json` file we created just before, adds some additional configuration to the flask application and also initiates a new OpenIDConnect instance wrapped around our Flask application using *flask_oidc*.
+This sets up the use of the `client_secrets.json` file we created just before, adds some additional configuration to the flask application and also initiates a new OpenIDConnect instance wrapped around our Flask application using `flask_oidc`.
