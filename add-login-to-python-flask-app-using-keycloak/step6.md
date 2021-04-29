@@ -1,5 +1,3 @@
-# Setting up Keycloak 
-
 # Creating the Keycloak user 
 
 Navigate to `Lookup` on the user management page and add a new user:
