@@ -1,5 +1,3 @@
-# Setting up Keycloak 
-
 # Creating a client
 
 Finally, we are going to create what is called a *client*. Clients are entities that may request authentication of a user, either in the form of a access token or to provide other forms of credentials, such as a username and password. 
