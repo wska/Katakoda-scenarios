@@ -14,7 +14,7 @@ def home():
 # Flask Login Redirect
 </pre>
 
-We also added a marker for another endpoint, which has quite a [*spoilery*](https://media.makeameme.org/created/spoilers-spoilers-everywhere-5cd1c4.jpg) name. More on that one later.
+We also added a marker for another endpoint, which has quite a *spoilery* name. More on that one later.
 
 This setups up some basic Flask configuration and creates an API endpoint, located at the root of our hostaddress ("/").
 
@@ -29,6 +29,7 @@ def main():
 # Access the URL
 
 You can start the application by running:
+
 ```python3 api.py```{{execute}}
 
 One can now query the API (i.e. using `curl`). Either open up a new terminal window, since `Terminal 1` is used for the Flask application, or use the clickable function on the command below:

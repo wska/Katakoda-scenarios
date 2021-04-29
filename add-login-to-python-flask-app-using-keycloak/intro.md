@@ -3,7 +3,7 @@ Welcome! This tutorial demonstrates how to secure an API endpoint using Keycloak
 *The aim of this tutorial is to:*
 
 * Showcase how to set up a simple Flask app in Python 3
-* Educate about security, Oauth2, OpenID Connect and Keycloak
+* Introduce Oauth2, OpenID Connect and Keycloak
 * Showcase how to set up Keycloak and host it using Docker
 * Expand the Flask app to allow interaction with the Keycloak server and use it for login procedures for certain endpoints
  
@@ -11,7 +11,7 @@ Welcome! This tutorial demonstrates how to secure an API endpoint using Keycloak
  
 **Keycloak**
 
-Keycloak is an open source software from Red Hat founded on standard protocols, that offers security solutions for applications, including SSO (”Single-Sign On”), social login and multifactor authentication. Furthermore, Keycloak supports technologies such as OpenID Connect and OAuth 2.0<sup>1,2</sup>. Keycloak is rather popular, due to its powerful and secure implementation and open-source nature. It is employed by many major corporations for authentication procedures and learning a bit about it could be an useful endeavour. 
+Keycloak is an open source software community project which is developed by Red Hat. It is founded on standard protocols that offers security solutions for applications, including SSO (”Single-Sign On”), social login and multifactor authentication. Furthermore, Keycloak supports technologies such as OpenID Connect and OAuth 2.0<sup>1,2</sup>. Keycloak is rather popular, due to its powerful and secure implementation and open-source nature. It is employed by many major corporations for authentication procedures and learning a bit about it could be an useful endeavour. Documentation can be found [here](https://www.keycloak.org/documentation).
 
 **Flask**
 
@@ -27,7 +27,7 @@ OpenID Connect builds upon Oauth2, by adding an identity layer to it. Documentat
 
 Sources: 
 1. https://www.keycloak.org/about 
-2. https://www.comakeit.com/blog/quick-guide-using-keycloak-identity-access-management/ 
+2. https://www.thomasvitale.com/introducing-keycloak-identity-access-management/
 3. https://www.geeksforgeeks.org/python-introduction-to-web-development-using-flask/
 4. https://auth0.com/intro-to-iam/what-is-oauth-2/
 

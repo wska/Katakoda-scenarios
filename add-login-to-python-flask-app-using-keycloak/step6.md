@@ -4,7 +4,7 @@ Next, we will create a user. To your left, you can see two submenus. Click on th
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/3.png?raw=true" width="500">
 
-Enter a name for the user and make sure that `Email Verified` is activated, else the user will be flagged as "incomplete" later on. This allows for using email verification(a very common feature in modern applications) if one wants it, but it is not part of this tutorial.  
+Enter a name for the user and make sure that `Email Verified` is activated, else the user will be flagged as "incomplete" later on. This allows for using email verification (a very common feature in modern applications) if one wants it, but it is not part of this tutorial.  Then save.
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/4.png?raw=true" width="500">
 

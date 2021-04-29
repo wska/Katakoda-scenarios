@@ -24,13 +24,11 @@ When integrating Keycloak to work with a Flask API, it is usually convenient to 
 <!--
 One final modification you will need to do is add the client secret, which can be found under Clients/ApiClient/Credentials in the Keycloak Admin console. You should take that value and replace the `SECRET HERE` value in the JSON file.
 -->
-</br>
 
 <span style="color:red">Please note: If you used different names in for your realm/client, make sure to adjust the config file accordingly!</span>
 
-</br>
 
-Now we will add some more configuration to our Flask application. Back in the *api.py* file, we want to add the following configuration settings:
+Now we will add some additional configurations to our Flask application. Open `api.py` in your editor again, and now we want to add the following configuration settings:
 
 <pre class="file" data-filename="project/api.py" data-target="insert" data-marker="app = Flask(__name__)">
 app = Flask(__name__)
@@ -51,4 +49,4 @@ oidc = OpenIDConnect(app)
 
 </pre>
 
-This sets up the use of the *client_secrets.json* file we created just before, adds some additional configuration to the flask application and also initiates a new OpenIDConnect instance wrapped around our Flask application using *flask_oidc*.
+This sets up the use of the `client_secrets.json` file we created just before, adds some additional configuration to the flask application and also initiates a new OpenIDConnect instance wrapped around our Flask application using *flask_oidc*.

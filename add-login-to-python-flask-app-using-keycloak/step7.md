@@ -14,15 +14,17 @@ Navigate to `Clients` under your realm, and then press `Create` in the top right
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/10.png?raw=true" width="500">
 
-Let us call our new client Flask application. The Flask application is on port 5000 unless you changed it, so make sure to also add the address **http://localhost:5000/** as the root URL:
+Let us call our new client '*flask-app*'. The Flask application is on port 5000 unless you changed it, so make sure to also add the address **http://localhost:5000/** as the root URL:
 
 <img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/11.png?raw=true" width="500">
 
 The client will be initialized as a *public client*. There is one thing here we need to modify, which is the **Valid Redirect URls**. Here you will need to put it as:
 
->*http://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/*\* 
+>*http://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/\** 
 
-This is due to the nature of our remote Katacoda environment host (this is its actual hostname, followed by a catch expression of "all endpoints", represented by the asterisk *). If any application which does not follow the above URl tries to connect to this client, it will be blocked. This is for security reasons, so not just anyone may try to authenticate towards the client.
+This is due to the nature of our remote Katacoda environment host (this is its actual hostname, followed by a catch expression of "all endpoints", represented by the asterisk *). If any application which does not follow the above URL tries to connect to this client, it will be blocked. This is for security reasons, so not just anyone may try to authenticate towards the client.
+
+<span style="color:red">DONT FORGET TO SAVE. It is as the very bottom of the page.</span>
 
 <!--
 Finally, there is one last thing we are going to need to extract from here, which is the *client secret*. After making the changes above, you can go ahead and save your changes by clicking the `Save` button at the bottom of the page. When you now toggle from a *public* to a *confidential* client, a *credentials* tab will show up at the top. If you head on over there, you will notice a field called *Secret*:
