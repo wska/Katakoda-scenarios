@@ -1,34 +1,54 @@
-# Creating a client
+## Configuring the Python API to work with our Keycloak realm
 
-Finally, we are going to create what is called a *client*. Clients are entities that may request authentication of a user, either in the form of a access token or to provide other forms of credentials, such as a username and password. 
+# Adding a client_secrets.json file
 
-There are a couple of different types of clients which are provided by Keycloak:
+When integrating Keycloak to work with a Flask API, it is usually convenient to have a `client_secrets.json` file which contains information about things like endpoints which the application will use to obtain and verify information. Here is how the json file should look, assuming you named the realm `myRealm`, and the client_ID as `flask-app`:
 
-* Confidential
-* Public
-* Bearer only
-
-These types have their different usages depending on the application type. We will be using a public client, which is the default when creating a new one.
-
-Navigate to `Clients` under your realm, and then press `Create` in the top right corner:
-
-<img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/10.png?raw=true" width="500">
-
-Let us call our new client Flask application. The Flask application is on port 5000 unless you changed it, so make sure to also add the address **http://localhost:5000/** as the root URL:
-
-<img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/11.png?raw=true" width="500">
-
-The client will be initialized as a *public client*. There is one thing here we need to modify, which is the **Valid Redirect URls**. Here you will need to put it as:
-
->*http://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/*\* 
-
-This is due to the nature of our remote Katacoda environment host (this is its actual hostname, followed by a catch expression of "all endpoints", represented by the asterisk *). If any application which does not follow the above URl tries to connect to this client, it will be blocked. This is for security reasons, so not just anyone may try to authenticate towards the client.
+<pre class="file" data-filename="project/client_secrets.json" data-target="replace">
+{
+    "web": {
+        "issuer": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm",
+        "auth_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/auth",
+        "client_id": "flask-app",
+        "client_secret": "",
+        "redirect_uris": [
+            "http://localhost:5000/*"
+        ],
+        "userinfo_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/userinfo", 
+        "token_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token",
+        "token_introspection_uri": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/myRealm/protocol/openid-connect/token/introspect"
+    }
+} 
+</pre>
 
 <!--
-Finally, there is one last thing we are going to need to extract from here, which is the *client secret*. After making the changes above, you can go ahead and save your changes by clicking the `Save` button at the bottom of the page. When you now toggle from a *public* to a *confidential* client, a *credentials* tab will show up at the top. If you head on over there, you will notice a field called *Secret*:
-
-<img src="https://github.com/wska/katacoda-scenarios/blob/main/add-login-to-python-flask-app-using-keycloak/img/13.png?raw=true" width="500">
-
-You will need this secret to configure the Flask application, so you can keep this tab open. You do not need to make any other changes in Keycloak. The client secret is generated, and you can can also generate new ones from here. 
+One final modification you will need to do is add the client secret, which can be found under Clients/ApiClient/Credentials in the Keycloak Admin console. You should take that value and replace the `SECRET HERE` value in the JSON file.
 -->
-Just a few steps left now, [keep going](https://64.media.tumblr.com/3487d11245609f74cb81c7e67c49bac5/tumblr_npnnnwNWJq1qc4uvwo1_500.jpg)!
+</br>
+
+<span style="color:red">Please note: If you used different names in for your realm/client, make sure to adjust the config file accordingly!</span>
+
+</br>
+
+Now we will add some more configuration to our Flask application. Back in the *api.py* file, we want to add the following configuration settings:
+
+<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="app = Flask(__name__)">
+app = Flask(__name__)
+app.config.update({
+    'SECRET_KEY': 'NotVerySecretKey',
+    'TESTING': True,
+    'DEBUG': True,
+    'OIDC_CLIENT_SECRETS': 'client_secrets.json',
+    'OIDC_ID_TOKEN_COOKIE_SECURE': False,
+    'OIDC_REQUIRE_VERIFIED_EMAIL': False,
+    'OIDC_USER_INFO_ENABLED': True,
+    'OIDC_OPENID_REALM': 'myRealm',
+    'OIDC_SCOPES': ['openid', 'email', 'profile'],
+    'OIDC_INTROSPECTION_AUTH_METHOD': 'client_secret_post'
+})
+
+oidc = OpenIDConnect(app)
+
+</pre>
+
+This sets up the use of the *client_secrets.json* file we created just before, adds some additional configuration to the flask application and also initiates a new OpenIDConnect instance wrapped around our Flask application using *flask_oidc*.

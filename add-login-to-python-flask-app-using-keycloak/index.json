@@ -30,24 +30,20 @@
         "text": "step6.md"
       },
       {
-        "title": "Step 7 - Creating a Keycloak role",
+        "title": "Step 7 - Adding a client",
         "text": "step7.md"
       },
       {
-        "title": "Step 8 - Adding a client",
+        "title": "Step 8 - Configuration for the Flask app to work with our server",
         "text": "step8.md"
       },
       {
-        "title": "Step 9 - Configuration for the Flask app to work with our server",
+        "title": "Step 9 - Expanding the Flask app",
         "text": "step9.md"
       },
       {
-        "title": "Step 10 - Expanding the Flask app",
+        "title": "Step 10 - Trying out the redirect",
         "text": "step10.md"
-      },
-      {
-        "title": "Step 11 - Trying out the redirect",
-        "text": "step11.md"
       }
     ],
     "assets": {

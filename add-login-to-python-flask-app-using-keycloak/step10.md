@@ -1,24 +1,10 @@
-# Adding the login redirect endpoint
+# Login redirect
 
-Securing an endpoint is to do so by redirecting a user to an authentication provider, such as our Keycloak server. This is a bit more suited to things like websites which are meant to be interacted with through a browser. 
+Now lets try it out: Try heading to the address of the secure api on port 5000 in your web browser (you can technically query it in the terminal too using curl, but you will simply get a redirect attempt as HTML code):
+> https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/secure
 
-Another way is by using an access token which is obtained from the Keycloak server. There are plenty of other tutorials that showcases how to do this, so we will be focusing on a login redirect here. 
 
-This is actually quite straightforward to do in Flask. flask_oidc provides a set of security features which incorporates the OIDC protocols in a way that follows the flask syntax of endpoints.
+You will notice that we actually end up on the Keycloak login page. Here you can use your Keycloak username and password which you defined earlier when you set up the server. Once you login, you should see the message from the */secure* endpoint!
 
-In our instance, we will be using the the following:
-
-> @oidc.require_login
-
-Which makes it so that the endpoint will require the user to log in using Keycloak, where you will need to provide a username and a password in order to access it, lest you [shall not pass](https://i.imgur.com/QV7ni6j.png).
-
-Lets add a new endpoint, called `/secure` which will require a complete login procedure:
-
-<pre class="file" data-filename="project/api.py" data-target="insert" data-marker="# Flask Login Redirect">
-# Flask Login Redirect
-@app.route("/secure")
-@oidc.require_login
-def secureEndpoint():
-    return "Hello from our secure endpoint, where you will need to authenticate beforehand."
-</pre>
+<span style="color:red">Please note: In case you recieve the message *Connecting to Port X*, your Flask application has likely gone down and you need to restart it again in `Terminal 1`!</span>
 
