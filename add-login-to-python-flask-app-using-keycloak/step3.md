@@ -32,6 +32,9 @@ You can start the application by running:
 
 ```python3 api.py```{{execute}}
 
-One can now query the API (i.e. using `curl`). Either open up a new terminal window, since `Terminal 1` is used for the Flask application, or use the clickable function on the command below:
+One can now query the API (i.e. using `curl`). Since `Terminal 1` is used for the Flask application, lets open a new window:
+```Click here!```{{execute T2}}
+
+and query the endpoint using:
 
 ```curl http://127.0.0.1:5000/```{{execute T2}}

@@ -8,7 +8,7 @@ There are a couple of different types of clients which are provided by Keycloak:
 * Public
 * Bearer only
 
-These types have their different usages depending on the application type. We will be using a public client, which is the default when creating a new one.
+These types have their different usages depending on the application type. We will be using a public client, which is the default when creating a new one. If you want to read more about the different client types, [here](https://www.keycloak.org/docs/latest/server_admin/index.html#oidc-clients) is the relevant section of Keycloaks documentation.
 
 Navigate to `Clients` under your realm, and then press `Create` in the top right corner:
 
@@ -20,7 +20,7 @@ Let us call our new client '*flask-app*'. The Flask application is on port 5000 
 
 The client will be initialized as a *public client*. There is one thing here we need to modify, which is the **Valid Redirect URls**. Here you will need to put it as:
 
->*http://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/\** 
+`http://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/*`
 
 This is due to the nature of our remote Katacoda environment host (this is its actual hostname, followed by a catch expression of "all endpoints", represented by the asterisk *). If any application which does not follow the above URL tries to connect to this client, it will be blocked. This is for security reasons, so not just anyone may try to authenticate towards the client.
 
