@@ -1,5 +1,3 @@
-# Setting up Keycloak 
-
 # Setting up role mappings
 
 Navigate to `Realm roles` on the configuration page and add a new role:
