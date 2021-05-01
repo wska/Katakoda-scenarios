@@ -5,7 +5,7 @@
 When integrating Keycloak to work with a Flask API, it is usually convenient to have a `client_secrets.json` file which contains information about things like endpoints which the application will use to obtain and verify information. Let's create the file:
 
 ``
-touch client_secrets.json
+touch project/client_secrets.json
 ``{{execute T3}}
 
 Below is how the json file should look, assuming you named the realm `myRealm`, and the client_ID as `flask-app`. Copy the code below into the `client_secrets.json` file:
